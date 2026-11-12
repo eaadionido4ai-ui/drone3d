@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#16303f" />
+    <meta name="description" content="DRONE 3D: fly a drone for disaster risk reduction and management. Watch for hazards, search for people in a flood, and deliver relief supplies, from a command desk or as the pilot." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="DRONE 3D" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <title>DRONE 3D</title>
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+    <div id="ui">
+      <div id="hud" hidden></div>
+      <div id="screen" class="screen" hidden></div>
+      <div id="loading" class="screen"><div class="spinner"></div><div>DRONE 3D</div></div>
+      <div id="rotate" hidden><div class="phone"></div><div class="rotate-text"></div></div>
+    </div>
+    <noscript>DRONE 3D needs JavaScript and WebGL.</noscript>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

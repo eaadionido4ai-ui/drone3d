@@ -1,0 +1,21 @@
+{
+  "name": "drone3d",
+  "private": true,
+  "version": "0.1.0",
+  "description": "DRONE 3D: the mobile version of DRONE VR, a game about drones for disaster risk reduction and management. A progressive web app built with three.js.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "test": "node --test \"test/**/*.test.js\"",
+    "routes": "node scripts/gen-routes.mjs"
+  },
+  "dependencies": {
+    "@fontsource/nunito": "5.3.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "vite": "7.3.6"
+  }
+}

@@ -1,0 +1,6 @@
+# Node
+node_modules/
+# What vite build writes (the GitHub workflow builds it again)
+dist/
+# Python
+__pycache__/

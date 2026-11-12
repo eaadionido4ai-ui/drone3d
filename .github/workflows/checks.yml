@@ -1,0 +1,28 @@
+# Checks DRONE 3D on every push: the rules and the missions (the tests also fly DRONE VR's recorded flights,
+# step by step), that the boats' routes are up to date with the plan, and that the game builds.
+name: checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Rules, missions and texts
+        run: npm test
+      - name: The boats' routes are up to date with the plan
+        run: |
+          npm run routes
+          git diff --exit-code -- src/core/routes.js
+      - name: The game builds, with its service worker
+        run: |
+          npm run build
+          test -f dist/sw.js && test -f dist/manifest.webmanifest

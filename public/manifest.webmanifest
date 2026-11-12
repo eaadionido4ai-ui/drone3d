@@ -1,0 +1,20 @@
+{
+  "name": "DRONE 3D",
+  "short_name": "DRONE 3D",
+  "description": "Fly a drone for disaster risk reduction and management: watch for hazards, search for people in a flood, and deliver relief supplies.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#0d1c25",
+  "theme_color": "#16303f",
+  "lang": "en",
+  "categories": ["games", "education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
